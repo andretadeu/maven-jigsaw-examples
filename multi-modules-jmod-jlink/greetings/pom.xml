@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>multi-modules-jmod-jlink</artifactId>
+        <groupId>com.andretadeu</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>com.andretadeu.greetings</artifactId>
+    <packaging>jmod</packaging>
+
+    <name>com.andretadeu.greetings</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.andretadeu</groupId>
+            <artifactId>com.andretadeu.world</artifactId>
+            <type>jmod</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>com.andretadeu.greetings.Main</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                        <configuration>
+                            <classifier>client</classifier>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jmod-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.andretadeu.greetings.Main</mainClass>
+                    <modulePath>target/jmods</modulePath>
+                    <moduleVersion>${project.version}</moduleVersion>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>list</id>
+                        <goals>
+                            <goal>list</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+                    <execution>
+                        <id>describe</id>
+                        <goals>
+                            <goal>describe</goal>
+                        </goals>
+                        <phase>verify</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
