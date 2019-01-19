@@ -20,15 +20,23 @@ To run these examples, you must have installed:
 
 ## How to build
 
-Firstly, you must clone the *maven-jmod-plugin* repository, change to the cloned directory, and change to the branch *develop*:
+Firstly, you must clone the *maven-jmod-plugin* and *maven-jlink-plugin* repository to build the plugins:
+
+For Maven JMOD plugin:
 
 ```{bash}
-git clone https://github.com//maven-jmod-plugin.git
+git clone https://github.com/apache/maven-jmod-plugin.git
 cd maven-jmod-plugin
-git checkout develop
 ```
 
-and then build the plugin needed to run this example:
+For Maven JLINK plugin:
+
+```{bash}
+git clone https://github.com/apache/maven-jlink-plugin.git
+cd maven-jmod-plugin
+```
+
+and then build each plugin:
 
 ```{bash}
 mvn clean install
