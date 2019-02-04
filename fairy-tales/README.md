@@ -1,18 +1,13 @@
 # maven-jigsaw-examples
 
-For now I have two examples of modularized Java applications
-
-1. standard-multi-modules: generates a 986MB Docker image to run a simple application
-2. multi-modules-jmod-jlink: generates a 65.2MB Docker image to run the same application
-3. fairy-tales: testing how to build the example in https://github.com/gradle-guides/building-java-9-modules in Maven
+Evaluating what was done in https://github.com/gradle-guides/building-java-9-modules and porting it to Maven.
 
 ## Prerequisites
 
-To run these examples, you must have installed:
+To run this example, you must have installed:
 
 - Java 11
 - Maven 3.6.0
-- Docker CE or EE
 
 ## How to build
 
@@ -39,4 +34,8 @@ and then build each plugin:
 mvn clean install
 ```
 
-Finally, you can select either of the projects to build.
+After that, change to this project's directory and run:
+
+```{bash}
+mvn clean package
+```

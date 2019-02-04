@@ -12,7 +12,7 @@ and losing some maintainability once I add other modules to the solution.
 
 ## Prerequisites
 
-To run these examples, you must have installed:
+To run this example, you must have installed:
 
 - Java 11
 - Maven 3.6.0
@@ -25,8 +25,9 @@ Firstly, you must clone the *maven-jmod-plugin* and *maven-jlink-plugin* reposit
 For Maven JMOD plugin:
 
 ```{bash}
-git clone https://github.com/apache/maven-jmod-plugin.git
+git clone https://github.com/andretadeu/maven-jmod-plugin.git
 cd maven-jmod-plugin
+git checkout cleanup-classpath
 ```
 
 For Maven JLINK plugin:

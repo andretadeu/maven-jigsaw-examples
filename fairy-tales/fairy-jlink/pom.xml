@@ -3,13 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>multi-modules-jmod-jlink</artifactId>
+        <artifactId>com.andretadeu.fairy.tales</artifactId>
         <groupId>com.andretadeu</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>greetings-jlink</artifactId>
+    <artifactId>fairy-jlink</artifactId>
     <packaging>jlink</packaging>
 
     <properties>
@@ -19,13 +19,32 @@
     <dependencies>
         <dependency>
             <groupId>com.andretadeu</groupId>
-            <artifactId>com.andretadeu.world</artifactId>
-            <version>${project.version}</version>
-            <classifier>client</classifier>
+            <artifactId>com.andretadeu.fairy.tales.tale</artifactId>
+            <type>jmod</type>
         </dependency>
         <dependency>
             <groupId>com.andretadeu</groupId>
-            <artifactId>com.andretadeu.greetings</artifactId>
+            <artifactId>com.andretadeu.fairy.tales.actors</artifactId>
+            <type>jmod</type>
+        </dependency>
+        <dependency>
+            <groupId>com.andretadeu</groupId>
+            <artifactId>com.andretadeu.fairy.tales.formula</artifactId>
+            <type>jmod</type>
+        </dependency>
+        <dependency>
+            <groupId>com.andretadeu</groupId>
+            <artifactId>com.andretadeu.fairy.tales.bears</artifactId>
+            <type>jmod</type>
+        </dependency>
+        <dependency>
+            <groupId>com.andretadeu</groupId>
+            <artifactId>com.andretadeu.fairy.tales.pigs</artifactId>
+            <type>jmod</type>
+        </dependency>
+        <dependency>
+            <groupId>com.andretadeu</groupId>
+            <artifactId>com.andretadeu.fairy.tales.fairy</artifactId>
             <version>${project.version}</version>
             <classifier>client</classifier>
         </dependency>
@@ -58,15 +77,23 @@
                 <extensions>true</extensions>
                 <configuration>
                     <modulePaths>
-                        <modulePath>${project.parent.basedir}/world/target/jmods</modulePath>
-                        <modulePath>${project.parent.basedir}/greetings/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/tale/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/actors/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/formula/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/bears/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/pigs/target/jmods</modulePath>
+                        <modulePath>${project.parent.basedir}/fairy/target/jmods</modulePath>
                     </modulePaths>
                     <addModules>
-                        <addModule>com.andretadeu.world</addModule>
-                        <addModule>com.andretadeu.greetings</addModule>
+                        <addModule>org.gradle.fairy.tales.tale</addModule>
+                        <addModule>org.gradle.fairy.tales.actors</addModule>
+                        <addModule>org.gradle.fairy.tales.formula</addModule>
+                        <addModule>org.gradle.fairy.tales.bears</addModule>
+                        <addModule>org.gradle.fairy.tales.pigs</addModule>
+                        <addModule>org.gradle.fairy.tales.app</addModule>
                     </addModules>
                     <launcher>
-                        runapp=com.andretadeu.greetings
+                        runapp=org.gradle.fairy.tales.app
                     </launcher>
                     <verbose>true</verbose>
                     <outputDirectory>target/dist</outputDirectory>
@@ -75,7 +102,7 @@
                     <stripDebug>true</stripDebug>
                 </configuration>
             </plugin>
-            <plugin>
+            <!-- <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
                 <executions>
@@ -94,7 +121,7 @@
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>
                 </configuration>
-            </plugin>
+            </plugin> -->
         </plugins>
     </build>
 </project>
