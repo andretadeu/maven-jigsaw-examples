@@ -2,10 +2,11 @@ FROM openjdk:11
 
 LABEL maintainer="Andre Tadeu de Carvalho <andre.tadeu.de.carvalho@gmail.com>"
 
-RUN mkdir -p /app
+RUN mkdir /app
 
-WORKDIR /app
+ADD target/lib /app/
+ADD start.sh /
 
-ADD target/lib/ .
+RUN chmod +x start.sh
 
-ENTRYPOINT ["java", "-jar", "/app/com.andretadeu.fairy.tales.fairy-1.0-SNAPSHOT.jar"]
+ENTRYPOINT [ "/start.sh" ]
