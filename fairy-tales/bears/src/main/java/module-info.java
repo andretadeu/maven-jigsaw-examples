@@ -1,10 +1,10 @@
-import org.gradle.fairy.tales.bears.GoldilocksAndTheThreeBears;
+import com.andretadeu.fairy.tales.bears.GoldilocksAndTheThreeBears;
 
-module org.gradle.fairy.tales.bears {
-    requires org.gradle.fairy.tales.actors;
-    requires transitive org.gradle.fairy.tales.tale;
-    requires org.gradle.fairy.tales.formula;
+module com.andretadeu.fairy.tales.bears {
+    requires com.andretadeu.fairy.tales.actors;
+    requires transitive com.andretadeu.fairy.tales.tale;
+    requires com.andretadeu.fairy.tales.formula;
 
-    provides org.gradle.fairy.tales.tale.Tale
+    provides com.andretadeu.fairy.tales.tale.Tale
         with GoldilocksAndTheThreeBears;
 }

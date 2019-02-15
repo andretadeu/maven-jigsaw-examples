@@ -1,4 +1,4 @@
-module org.gradle.fairy.tales.app {
-    requires org.gradle.fairy.tales.tale;
-    uses org.gradle.fairy.tales.tale.Tale;
+module com.andretadeu.fairy.tales.app {
+    requires com.andretadeu.fairy.tales.tale;
+    uses com.andretadeu.fairy.tales.tale.Tale;
 }

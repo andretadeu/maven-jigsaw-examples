@@ -20,37 +20,31 @@
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.tale</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.actors</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.formula</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.bears</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.pigs</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.andretadeu</groupId>
                 <artifactId>com.andretadeu.fairy.tales.fairy</artifactId>
                 <version>${project.version}</version>
-                <type>jmod</type>
             </dependency>
             <dependency>
                 <groupId>com.google.guava</groupId>
@@ -115,24 +109,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jlink-plugin</artifactId>
-                <version>3.0.0-alpha-2-SNAPSHOT</version>
-                <extensions>true</extensions>
-                <configuration>
-                    <noHeaderFiles>true</noHeaderFiles>
-                    <noManPages>true</noManPages>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jmod-plugin</artifactId>
-                <version>3.0.0-alpha-2-SNAPSHOT</version>
-                <extensions>true</extensions>
-            </plugin>
-        </plugins>
     </build>
 
     <modules>
@@ -142,7 +118,7 @@
         <module>bears</module>
         <module>pigs</module>
         <module>fairy</module>
-        <module>fairy-jlink</module>
+        <module>fairy-docker</module>
     </modules>
 
 </project>

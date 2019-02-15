@@ -1,3 +1,3 @@
-module org.gradle.fairy.tales.tale {
-    exports org.gradle.fairy.tales.tale;
+module com.andretadeu.fairy.tales.tale {
+    exports com.andretadeu.fairy.tales.tale;
 }

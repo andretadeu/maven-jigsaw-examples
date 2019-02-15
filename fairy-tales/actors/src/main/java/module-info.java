@@ -1,4 +1,4 @@
-module org.gradle.fairy.tales.actors {
-    requires static com.google.common;
-    exports org.gradle.fairy.tales.actors;
+module com.andretadeu.fairy.tales.actors {
+    requires com.google.common;
+    exports com.andretadeu.fairy.tales.actors;
 }
