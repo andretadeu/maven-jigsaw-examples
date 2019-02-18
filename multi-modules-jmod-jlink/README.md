@@ -25,9 +25,8 @@ Firstly, you must clone the *maven-jmod-plugin* and *maven-jlink-plugin* reposit
 For Maven JMOD plugin:
 
 ```{bash}
-git clone https://github.com/andretadeu/maven-jmod-plugin.git
+git clone https://github.com/apache/maven-jmod-plugin.git
 cd maven-jmod-plugin
-git checkout cleanup-classpath
 ```
 
 For Maven JLINK plugin:
