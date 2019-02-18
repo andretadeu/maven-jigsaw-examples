@@ -1,6 +1,7 @@
-# maven-jigsaw-examples
+# fairy-tales-jmod-jlink
 
-Evaluating what was done in https://github.com/gradle-guides/building-java-9-modules and porting it to Maven.
+Evaluating what was done in https://github.com/gradle-guides/building-java-9-modules and porting it to Maven, and
+changing it to use JMOD and JLink.
 
 ## Prerequisites
 
@@ -38,4 +39,5 @@ After that, change to this project's directory and run:
 For this project, it is enough to run the Maven command below:
 
 ```{bash}
-mvn clean packag
+mvn clean package
+```

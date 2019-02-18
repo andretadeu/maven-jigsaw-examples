@@ -1,4 +1,4 @@
-# maven-jigsaw-examples
+# fairy-tales
 
 Evaluating what was done in https://github.com/gradle-guides/building-java-9-modules and porting it to Maven.
 
