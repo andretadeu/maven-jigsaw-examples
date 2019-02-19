@@ -6,6 +6,8 @@ For now I have two examples of modularized Java applications
 2. multi-modules-jmod-jlink: generates a 59MB Docker image to run the same application
 3. fairy-tales: testing how to build the example in https://github.com/gradle-guides/building-java-9-modules in Maven
 4. fairy-tales-jmod-jlink: another version of fairy-tales without Guava and using JMOD and JLink
+5. modularized-args4j-usage: example on how a modularized library that needs to use reflection in the application's
+classes works with **jmod** and **jlink**.
 
 ## Prerequisites
 
