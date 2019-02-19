@@ -82,7 +82,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>${docker.repository}/${project.name}-multi-module-slim</repository>
+                    <repository>${docker.repository}/${project.name}-multi-module</repository>
                     <tag>${project.version}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>

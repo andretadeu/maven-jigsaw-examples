@@ -16,3 +16,11 @@ For this project, it is enough to run the Maven command below:
 ```{bash}
 mvn clean package
 ```
+
+## How to run
+
+Since the build generates a Docker image, it is enough to execute:
+
+```{bash}
+docker run -it --name test-3 andretadeu/fairy-docker-multi-module:1.0-SNAPSHOT
+```

@@ -60,5 +60,5 @@ mvn clean package
 Since the build generates a Docker image, it is enough to execute:
 
 ```{bash}
-docker run -it --name test andretadeu/app-jlink-slim:1.0-SNAPSHOT
+docker run -it --name test-5 andretadeu/app-jlink-slim:1.0-SNAPSHOT
 ```

@@ -40,3 +40,11 @@ For this project, it is enough to run the Maven command below:
 ```{bash}
 mvn clean package
 ```
+
+## How to run
+
+Since the build generates a Docker image, it is enough to execute:
+
+```{bash}
+docker run -it --name test-4 andretadeu/fairy-docker-jmod-jlink-slim:1.0-SNAPSHOT
+```

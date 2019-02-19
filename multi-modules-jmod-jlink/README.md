@@ -47,3 +47,11 @@ After that, change to this project's directory and run:
 ```{bash}
 mvn clean package
 ```
+
+## How to run
+
+Since the build generates a Docker image, it is enough to execute:
+
+```{bash}
+docker run -it --name test-2 andretadeu/greetings-jlink-multi-module-slim:1.0-SNAPSHOT
+```
