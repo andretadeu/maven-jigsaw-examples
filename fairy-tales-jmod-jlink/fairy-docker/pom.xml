@@ -89,14 +89,6 @@
                         <modulePath>${project.parent.basedir}/pigs/target/jmods</modulePath>
                         <modulePath>${project.parent.basedir}/fairy/target/jmods</modulePath>
                     </modulePaths>
-                    <addModules>
-                        <addModule>com.andretadeu.fairy.tales.tale</addModule>
-                        <addModule>com.andretadeu.fairy.tales.actors</addModule>
-                        <addModule>com.andretadeu.fairy.tales.formula</addModule>
-                        <addModule>com.andretadeu.fairy.tales.bears</addModule>
-                        <addModule>com.andretadeu.fairy.tales.pigs</addModule>
-                        <addModule>com.andretadeu.fairy.tales.app</addModule>
-                    </addModules>
                     <launcher>
                         runapp=com.andretadeu.fairy.tales.app
                     </launcher>

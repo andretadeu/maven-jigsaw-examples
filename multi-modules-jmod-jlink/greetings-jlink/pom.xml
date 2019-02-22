@@ -61,10 +61,6 @@
                         <modulePath>${project.parent.basedir}/world/target/jmods</modulePath>
                         <modulePath>${project.parent.basedir}/greetings/target/jmods</modulePath>
                     </modulePaths>
-                    <addModules>
-                        <addModule>com.andretadeu.world</addModule>
-                        <addModule>com.andretadeu.greetings</addModule>
-                    </addModules>
                     <launcher>
                         runapp=com.andretadeu.greetings
                     </launcher>
