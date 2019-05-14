@@ -18,9 +18,8 @@ Firstly, you must clone the *maven-jmod-plugin* and *maven-jlink-plugin* reposit
 For Maven JMOD plugin:
 
 ```{bash}
-git clone https://github.com/andretadeu/maven-jmod-plugin.git
+git clone https://github.com/apache/maven-jmod-plugin.git
 cd maven-jmod-plugin
-git checkout cleanup-classpath
 ```
 
 For Maven JLINK plugin:
@@ -43,7 +42,7 @@ git clone https://github.com/java-modularity-examples/args4j.git
 cd args4j
 ```
 
-and the build and install it in your local Maven repository:
+and the build all these projects and install them in your local Maven repository:
 
 ```{bash}
 mvn clean install

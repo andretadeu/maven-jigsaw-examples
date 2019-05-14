@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM openjdk:12
 
 LABEL maintainer="Andre Tadeu de Carvalho <andre.tadeu.de.carvalho@gmail.com>"
 
